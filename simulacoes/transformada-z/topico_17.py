@@ -39,7 +39,7 @@ for p in polos:
 # 4. Diagrama de polos e zeros
 # -------------------------------------------------
 
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(10, 8))
 
 angulo = np.linspace(0, 2*np.pi, 500)
 
@@ -83,7 +83,8 @@ ax.set_xlim(-1.2, 1.2)
 ax.set_ylim(-1.2, 1.2)
 ax.set_aspect("equal", adjustable="box")
 ax.grid(True)
-ax.legend()
+ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.72)
 
 plt.show()
 

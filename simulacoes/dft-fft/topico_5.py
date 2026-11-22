@@ -11,7 +11,7 @@ f2 = 55
 valores_N = [64, 256, 1024]
 
 # Geração e análise do sinal
-fig, axs = plt.subplots(3, 1, figsize=(12, 12))
+fig, axs = plt.subplots(3, 1, figsize=(12, 15), constrained_layout=True)
 
 for i, N in enumerate(valores_N):
 
@@ -52,7 +52,6 @@ for i, N in enumerate(valores_N):
     axs[i].set_xlim(35, 70)
     axs[i].grid(True)
 
-plt.tight_layout()
 plt.show()
 
 # Apresentação dos valores calculados

@@ -76,9 +76,9 @@ ax_z.set_xlabel("Parte real")
 ax_z.set_ylabel("Parte imaginária")
 ax_z.grid(True)
 ax_z.set_aspect("equal", adjustable="datalim")
-ax_z.legend()
+ax_z.legend(loc="center left", bbox_to_anchor=(1.02, 0.5))
 
-plt.tight_layout()
+fig.tight_layout(rect=(0, 0, 0.8, 1))
 plt.show()
 
 # Apresentação dos valores calculados

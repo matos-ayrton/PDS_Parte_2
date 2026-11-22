@@ -32,7 +32,7 @@ x_bilateral = np.where(
 # 2. Representacao das sequencias
 # -------------------------------------------------
 
-fig, eixos = plt.subplots(3, 1, figsize=(10, 10))
+fig, eixos = plt.subplots(3, 1, figsize=(10, 14))
 
 eixos[0].stem(n_causal, x_causal)
 eixos[0].set_title("Sequencia causal")
@@ -52,7 +52,7 @@ eixos[2].set_xlabel("Indice n")
 eixos[2].set_ylabel("Amplitude")
 eixos[2].grid(True)
 
-plt.tight_layout()
+fig.subplots_adjust(hspace=0.7)
 plt.show()
 
 # -------------------------------------------------

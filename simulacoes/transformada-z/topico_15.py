@@ -73,7 +73,7 @@ plt.show()
 # 4. Representacao dos polos e zeros no plano-z
 # -------------------------------------------------
 
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(11, 8))
 
 # Circunferencia unitaria
 theta = np.linspace(0, 2*np.pi, 500)
@@ -115,7 +115,8 @@ ax.set_xlim(-1.4, 1.4)
 ax.set_ylim(-1.4, 1.4)
 ax.set_aspect("equal", adjustable="box")
 ax.grid(True)
-ax.legend()
+ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.68)
 
 plt.show()
 

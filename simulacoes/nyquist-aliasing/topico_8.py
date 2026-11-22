@@ -55,7 +55,7 @@ print(f"Frequência de Nyquist: {f_nyquist} Hz")
 print(f"Frequência aparente: {f_alias} Hz")
 
 # Criação dos gráficos
-fig, eixos = plt.subplots(3, 1, figsize=(12, 12))
+fig, eixos = plt.subplots(3, 1, figsize=(12, 15))
 
 # 1. Sinal contínuo
 eixos[0].plot(
@@ -123,5 +123,5 @@ eixos[2].set_xlim(0, fs / 2)
 eixos[2].grid(True)
 eixos[2].legend()
 
-plt.tight_layout()
+fig.subplots_adjust(hspace=0.65)
 plt.show()

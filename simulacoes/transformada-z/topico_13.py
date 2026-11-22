@@ -33,7 +33,7 @@ fase = np.angle(X_numerica)
 # Criacao dos graficos
 # -------------------------------------------------
 
-fig, eixos = plt.subplots(3, 1, figsize=(11, 12))
+fig, eixos = plt.subplots(3, 1, figsize=(11, 15))
 
 # 1. Sequencia no dominio do tempo
 eixos[0].stem(n, x)
@@ -64,14 +64,14 @@ eixos[2].set_xlabel("Frequencia angular (rad/amostra)")
 eixos[2].set_ylabel("Fase (rad)")
 eixos[2].grid(True)
 
-plt.tight_layout()
+fig.subplots_adjust(hspace=0.65)
 plt.show()
 
 # -------------------------------------------------
 # Plano-z: polos e zeros
 # -------------------------------------------------
 
-fig, ax = plt.subplots(figsize=(7, 7))
+fig, ax = plt.subplots(figsize=(9, 7))
 
 # Circunferencia unitaria
 angulo = np.linspace(0, 2*np.pi, 500)
@@ -98,6 +98,7 @@ ax.set_xlabel("Parte real")
 ax.set_ylabel("Parte imaginaria")
 ax.set_aspect("equal", adjustable="box")
 ax.grid(True)
-ax.legend()
+ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.72)
 
 plt.show()

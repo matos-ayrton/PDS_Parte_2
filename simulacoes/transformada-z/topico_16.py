@@ -67,7 +67,7 @@ respostas["complexo"] = y_complexo
 # 3. Respostas individuais
 # -------------------------------------------------
 
-fig, eixos = plt.subplots(3, 2, figsize=(13, 12))
+fig, eixos = plt.subplots(3, 2, figsize=(13, 16))
 
 titulos = [
     "Polo = 0.5",
@@ -91,7 +91,7 @@ for ax, chave, titulo in zip(
 # Remove o ultimo quadro vazio
 fig.delaxes(eixos[2, 1])
 
-plt.tight_layout()
+fig.subplots_adjust(hspace=0.65, wspace=0.3)
 plt.show()
 
 # -------------------------------------------------
@@ -124,7 +124,7 @@ plt.show()
 # 5. Representacao dos polos no plano-z
 # -------------------------------------------------
 
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(11, 8))
 
 # Circulo unitario
 angulo = np.linspace(0, 2*np.pi, 500)
@@ -173,7 +173,8 @@ ax.set_xlim(-1.3, 1.3)
 ax.set_ylim(-1.3, 1.3)
 ax.set_aspect("equal", adjustable="box")
 ax.grid(True)
-ax.legend()
+ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5))
+fig.subplots_adjust(right=0.68)
 
 plt.show()
 
